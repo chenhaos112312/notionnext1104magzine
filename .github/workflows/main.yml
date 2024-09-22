@@ -1,0 +1,31 @@
+name: Axios
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  axios-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Auth API
+        uses: actionsflow/axios@v1
+        id: api
+        with:
+          url: https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/f30cfb62-d286-4c6a-94a2-6fc8e6bbd058
+          method: "POST"
+          # basic-auth: "${{ secrets.username }}:${{ secrets.password }}"
+      - run: echo ${{ steps.api.outputs.data }} # 打印数据
+      # - run: echo ${{ steps.api.outputs.data.data.token }}
+
+      #- name: Get current timestamp 获取当前时间戳
+      #  id: get_timestamp
+      #  run: echo "BUILD_TIME=$(date +'%s')" >> $GITHUB_ENV
+      #- run: echo ${{ env.BUILD_TIME }}
+
+      - name: Extract JSON Property 获取JSON数据
+        id: extract-json
+        run: |
+          getToken=$(echo '${{ steps.api.outputs.data }}' | jq -r '.data.result.id')
+          echo "token=$getToken" >> $GITHUB_ENV  # 添加到环境变量里
