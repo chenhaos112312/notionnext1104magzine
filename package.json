@@ -1,5 +1,6 @@
 {
   "name": "notion-next",
+  "packageManager": "yarn@1.22.22",
   "version": "4.7.2",
   "homepage": "https://github.com/tangly1024/NotionNext.git",
   "license": "MIT",
