@@ -17,7 +17,7 @@ const PostSimpleListHorizontal = ({ title, href, posts }) => {
       <div className='max-w-screen-3xl w-full mx-auto px-4 lg:px-0'>
         {/* 标题 */}
         <div className='flex justify-between items-center py-6'>
-          <h3 className='text-2xl'>{title}</h3>
+          <h3 className='text-4xl font-bold'>{title}</h3>
           {href && (
             <Link
               className='hidden font-bold lg:block text-lg underline'
