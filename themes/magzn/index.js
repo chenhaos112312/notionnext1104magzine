@@ -70,7 +70,6 @@ const LayoutBase = props => {
               {children}
             </div>
             {/* 行动呼吁 */}
-            <CTA {...props} />
             <Footer title={siteConfig('TITLE')} />
           </div>
         </main>
@@ -99,6 +98,7 @@ const LayoutIndex = props => {
     <div className='pt-10 md:pt-18'>
       {/* 首屏宣传区块 */}
       <Hero posts={posts} />
+      <CTA {...props} />
 
       {/* 最新文章区块 */}
       <PostSimpleListHorizontal
@@ -111,7 +111,6 @@ const LayoutIndex = props => {
       <PostBannerGroupByCategory {...props} />
 
       {/* 文章推荐  */}
-      <PostListRecommend {...props} />
     </div>
   )
 }
