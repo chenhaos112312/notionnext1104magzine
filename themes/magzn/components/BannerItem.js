@@ -19,13 +19,13 @@ export default function BannerItem() {
     return null
   }
 
-  return (
+ return (
     <div className='flex flex-col p-5 gap-y-5 dark items-center justify-between w-full bg-black text-white'>
       {/* 首屏导航按钮 */}
       <h2 className='text-2xl font-semibold'>{title}</h2>
       <h3 className='text-sm'>{description}</h3>
       {button && (
-        <div className='mt-2 text-center px-6 py-3 font-semibold rounded-3xl text-black bg-[#7BE986] hover:bg-[#62BA6B]'>
+        <div className='mt-2 text-center px-6 py-3 font-semibold rounded-3xl text-black bg-[#FFF] hover:bg-[#FFF]'>
           <Link href={url}>{text}</Link>
         </div>
       )}
