@@ -6,13 +6,13 @@ import Announcement from './Announcement'
  * 用户的公告栏内容将在此显示
  **/
 export default function CTA({ notice }) {
-  return (
+ return (
     <>
       {/* 底部 */}
       <Announcement
         post={notice}
         className={
-          'text-center text-black bg-[#7BE986] dark:bg-hexo-black-gray py-16'
+          'text-center light:text-white dark:text-black bg-[#000] dark:bg-hexo-black-gray py-16'
         }
       />
     </>
