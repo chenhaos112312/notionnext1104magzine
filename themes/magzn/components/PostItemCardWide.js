@@ -71,12 +71,12 @@ const PostItemCardWide = ({ post, showSummary }) => {
       </div>
 
       {/* 卡牌右侧图片 */}
-      <div className='w-40 h-40 object-cover overflow-hidden mb-2'>
+      <div className='w-80 h-40 object-cover overflow-hidden mb-2'>
         <LazyImage
           alt={post?.title}
           src={post.pageCoverThumbnail}
           style={post.pageCoverThumbnail ? {} : { height: '0px' }}
-          className='w-40 h-40 object-cover hover:scale-125 duration-150'
+          className='w-80 h-40 object-cover hover:scale-125 duration-150'
         />
       </div>
     </div>
