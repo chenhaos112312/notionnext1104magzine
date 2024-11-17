@@ -46,17 +46,17 @@ const PostItemCardTop = ({ post, showSummary }) => {
         <div className="relative z-50">
           <div className="fixed top-2/3 left-0">
             <div className='flex py-2 mr-2 items-center '>
-              {siteConfig('MAGZINE_POST_LIST_CATEGORY') && (
+               {/* {siteConfig('MAGZINE_POST_LIST_CATEGORY') && (
                 <CategoryItem category={post.category} />
-              )}
+              )} */}
               <div
                 className={
                   'flex items-center justify-start flex-wrap space-x-3 text-gray-100'
                 }>
-                {siteConfig('MAGZINE_POST_LIST_TAG') &&
+               {/* {siteConfig('MAGZINE_POST_LIST_TAG') &&
                   post?.tagItems?.map(tag => (
                     <TagItemMini key={tag.name} tag={tag} />
-                  ))}
+                  ))} */}
               </div>
             </div>
 
