@@ -31,7 +31,7 @@ const PostItemCardSimple = ({ post, showSummary }) => {
                     alt={post?.title}
                     src={cover}
                     style={cover ? {} : { height: '0px' }}
-                    className='w-full h-40 aspect-video object-cover'
+                    className='w-full h-40 aspect-video object-cover hover:scale-125 duration-150'
                   />
                 </div>
               </Link>
