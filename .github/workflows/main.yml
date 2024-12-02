@@ -15,7 +15,7 @@ jobs:
         uses: actionsflow/axios@v1
         id: api
         with:
-          url: https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/f30cfb62-d286-4c6a-94a2-6fc8e6bbd058
+          url: https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/e7adf21c-f91d-437b-ad8e-c3a3e808299e
           method: "POST"
           # basic-auth: "${{ secrets.username }}:${{ secrets.password }}"
       - run: echo ${{ steps.api.outputs.data }} # 打印数据
